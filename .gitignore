@@ -1,0 +1,10 @@
+client/node_modules/
+client/vite-project/node_modules/
+server/node_modules/
+
+client/vite-project/dist/
+
+client/vite-project/.env
+server/.env
+
+*.log
