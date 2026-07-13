@@ -25,7 +25,7 @@ const sendOtpEmail = async (email, Otp, type) => {
             'Please use the following Otp to verify and confirm your event booking'
 
         const mailOptions = {
-            from: process.env.BREVO_USER,
+            from: `"Eventora" <${process.env.EMAIL_USER}>`,
             to: email,
             subject: title,
             text: `Your OTP code is :${Otp} `
@@ -42,7 +42,7 @@ const sendOtpEmail = async (email, Otp, type) => {
 const sendBookingEmail = async (userEmail, userName, eventTitle) => {
     try {
         const mailOptions = {
-            from: process.env.BREVO_USER,
+            from: `"Eventora" <${process.env.EMAIL_USER}>`,
             to: userEmail,
             subject: `Booking Confirmed : ${eventTitle}`,
             html: `
